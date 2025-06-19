@@ -320,4 +320,146 @@ body {
 
 .animate-fade-in {
   animation: fadeIn 0.3s ease-out;
+}
+
+/* Additional Responsive Breakpoints */
+@media (max-width: 1024px) {
+  .container {
+    padding: 0.75rem;
+  }
+  
+  .portfolio-overview {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  
+  .stat-card {
+    padding: 0.75rem;
+  }
+  
+  .card-title {
+    font-size: 1.125rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 0.5rem;
+  }
+  
+  .portfolio-overview {
+    grid-template-columns: 1fr;
+  }
+  
+  .portfolio-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .token-list {
+    grid-template-columns: 1fr;
+  }
+  
+  .stat-value {
+    font-size: 1.25rem;
+  }
+  
+  .nav {
+    padding: 0.5rem 0;
+  }
+  
+  .card {
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+  }
+  
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in {
+    animation: none;
+  }
+  
+  .btn, .nav-link {
+    transition: none;
+  }
+}
+
+/* Print styles */
+@media print {
+  body {
+    background: white;
+  }
+  
+  .container {
+    max-width: none;
+    padding: 0;
+  }
+  
+  .nav, .btn {
+    display: none;
+  }
+  
+  .card {
+    break-inside: avoid;
+    border: 1px solid #ddd;
+    box-shadow: none;
+  }
+  
+  .chart-container {
+    max-height: 200px;
+    page-break-inside: avoid;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #0f172a;
+    --text-color: #e2e8f0;
+    --border-color: #334155;
+  }
+  
+  body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+  
+  .card, .nav, .stat-card {
+    background-color: #1e293b;
+  }
+  
+  .table th {
+    background-color: #1e293b;
+  }
+  
+  .btn-secondary {
+    background-color: #334155;
+    border-color: #475569;
+    color: var(--text-color);
+  }
+  
+  .form-input {
+    background-color: #1e293b;
+    border-color: #475569;
+    color: var(--text-color);
+  }
+  
+  .form-input:focus {
+    border-color: var(--primary-color);
+  }
+  
+  .nav-link {
+    color: var(--text-color);
+  }
+  
+  .nav-link:hover {
+    background-color: #334155;
+  }
+  
+  .nav-link.active {
+    background-color: #1e40af;
+  }
 } 
