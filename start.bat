@@ -1,9 +1,0 @@
-@echo off
-echo Starting Crypto Portfolio Manager...
-echo.
-echo Installing dependencies...
-npm install
-echo.
-echo Starting development server...
-npm run dev
-pause 
