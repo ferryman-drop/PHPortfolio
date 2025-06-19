@@ -2,4 +2,9 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/ferry861/portfolio.cryptogeek.click
+    - export REPOPATH=/home/ferry861/repositories/PHPortfolio
+    - cd $REPOPATH
+    - /usr/local/cpanel/3rdparty/bin/git fetch origin
+    - /usr/local/cpanel/3rdparty/bin/git reset --hard origin/main
+    - /usr/local/cpanel/3rdparty/bin/git clean -f -d
     - /bin/cp -R php-portfolio/* $DEPLOYPATH 
