@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/username/public_html/
+    - export DEPLOYPATH=/home/ferry861/portfolio.cryptogeek.click
     - /bin/cp -R php-portfolio/* $DEPLOYPATH 
