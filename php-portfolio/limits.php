@@ -75,7 +75,7 @@ elseif (count($violations) > 0) $status = 'warning';
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Лимиты по категориям</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/style.css" rel="stylesheet">
+  <link href="assets/style.min.css" rel="stylesheet">
 </head>
 <body class="bg-light">
   <div class="container py-4">
