@@ -11,12 +11,10 @@
 }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  background-color: var(--background-color);
-  color: var(--text-color);
-  line-height: 1.5;
+  font-family: 'Inter', sans-serif;
+  background-color: #0f172a;
+  color: #cbd5e1;
   margin: 0;
-  padding: 0;
 }
 
 .container {
@@ -462,4 +460,366 @@ body {
   .nav-link.active {
     background-color: #1e40af;
   }
-} 
+}
+
+/*-SDR-*/
+.dashboard-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 80px;
+  background-color: #1e293b;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.sidebar .logo {
+  color: #f59e0b;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+.sidebar-nav a {
+  color: #94a3b8;
+  font-size: 1.5rem;
+  display: block;
+  transition: color 0.3s;
+  padding: 10px;
+}
+
+.sidebar-nav a:hover,
+.sidebar-nav a.active {
+  color: #fff;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 30px;
+  overflow-y: auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.header-left .title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.header-left .subtitle {
+  font-size: 0.9rem;
+  color: #94a3b8;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.header-stat {
+  text-align: right;
+}
+
+.header-stat .label {
+  font-size: 0.8rem;
+  color: #94a3b8;
+}
+
+.header-stat .value {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+}
+
+.header-stat .value .change {
+  font-size: 0.8rem;
+  color: #10b981;
+  margin-left: 5px;
+}
+
+.btn-export {
+  background-color: #3b82f6;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+}
+
+.portfolio-overview {
+  margin-bottom: 30px;
+}
+
+.overview-header {
+  margin-bottom: 20px;
+}
+
+.overview-header .title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.overview-header .subtitle {
+  font-size: 0.9rem;
+  color: #94a3b8;
+}
+
+.overview-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.overview-card {
+  background-color: #1e293b;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.overview-card .card-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: #94a3b8;
+  margin-bottom: 10px;
+}
+
+.overview-card .card-value {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.overview-card .card-value .change {
+  font-size: 1rem;
+  color: #10b981;
+  margin-left: 10px;
+}
+.overview-card .card-value .change.negative {
+  color: #ef4444;
+}
+
+.profile-section {
+  background-color: #1e293b;
+  padding: 15px 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.profile-info .icon {
+  font-size: 2rem;
+  color: #f59e0b;
+}
+
+.profile-info .text .title {
+  font-weight: 600;
+  color: #fff;
+}
+
+.profile-info .text .subtitle {
+  font-size: 0.9rem;
+  color: #94a3b8;
+}
+
+.profile-actions button {
+  background-color: #374151;
+  color: #e5e7eb;
+  border: 1px solid #4b5563;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-left: 10px;
+  font-weight: 500;
+}
+
+.profile-actions button.auto-mode {
+  background-color: #3b82f6;
+  border-color: #3b82f6;
+  color: #fff;
+}
+
+.limits-alert {
+  background-color: rgba(245, 158, 11, 0.1);
+  border: 1px solid rgba(245, 158, 11, 0.5);
+  color: #f6ad55;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+.limits-alert .icon {
+  margin-right: 10px;
+}
+
+.limits-alert-header {
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #fbd38d;
+}
+
+.limits-alert ul {
+  margin: 0;
+  padding-left: 20px;
+  list-style-type: '• ';
+}
+.limits-alert ul li {
+  margin-bottom: 5px;
+}
+
+.limits-alert a {
+  color: #f6ad55;
+  text-decoration: underline;
+  display: inline-block;
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+.asset-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.asset-card {
+  background-color: #1e293b;
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.asset-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.asset-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.asset-title .icon {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.asset-title .title-text .name {
+  font-weight: 600;
+  color: #fff;
+}
+.asset-title .title-text .desc {
+  font-size: 0.8rem;
+  color: #94a3b8;
+}
+
+.asset-card-actions {
+  color: #94a3b8;
+}
+
+.asset-info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  flex-grow: 1;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.info-row .label {
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+.info-row .value {
+  font-weight: 500;
+  color: #fff;
+}
+.info-row .value.positive {
+  color: #10b981;
+}
+.info-row .value.negative {
+  color: #ef4444;
+}
+
+.allocation-bar-container {
+  width: 100%;
+}
+.allocation-bar {
+  width: 100%;
+  background-color: #374151;
+  height: 6px;
+  border-radius: 3px;
+  margin-top: 5px;
+  overflow: hidden;
+}
+
+.allocation-bar-inner {
+  height: 100%;
+}
+
+.asset-status {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  padding-top: 15px;
+  border-top: 1px solid #374151;
+}
+
+.asset-status.below { color: #f59e0b; }
+.asset-status.above { color: #ef4444; }
+.asset-status.within { color: #10b981; }
+
+/* Colors for asset icons and bars */
+.btc .icon { background-color: #f7931a; }
+.eth .icon { background-color: #627eea; }
+.stable .icon { background-color: #26a17b; }
+.defi .icon { background-color: #ef4444; }
+
+.btc .allocation-bar-inner { background-color: #f7931a; }
+.eth .allocation-bar-inner { background-color: #627eea; }
+.stable .allocation-bar-inner { background-color: #26a17b; }
+.defi .allocation-bar-inner { background-color: #ef4444; }
+
+/* Icons */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap'); 
